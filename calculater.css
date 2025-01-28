@@ -1,0 +1,26 @@
+body
+{
+    width: 100%;
+    height: 600px;
+    background-image: url(https://t3.ftcdn.net/jpg/02/75/83/08/360_F_275830884_RQ2h4WYKdoiXJbZKTmKDbmKsQhb4yTTG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.box
+{
+    width: 400px;
+    height: 300px;
+    background-color:black;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+div#box {
+    background-color: black;
+    padding: 4rem;
+}

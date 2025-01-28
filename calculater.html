@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculater.css">
+</head>
+<body>
+
+    <h1>Calculator by DOM</h1>
+
+    <div id="box">
+        <input type="number" id="firstvalue" placeholder="ENTER YOUR FIRST VALUE"> <br><br>
+        <select id="operation">
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">*</option>
+            <option value="divided">/</option>
+        </select><br>
+        <input type="number" id="secondvalue" placeholder="ENTER YOUR SECOND VALUE"><br><br>
+        <button onclick="calculate()">Submit</button><br><br>
+        <input type="text" id="finalvalue" placeholder="ANSWER" readonly><br><br>
+        <div id="result">Result:</div>
+    </div>
+    
+    <script>
+    function calculate() {
+        let firstvalue = parseFloat(document.getElementById("firstvalue").value);
+        let secondvalue = parseFloat(document.getElementById("secondvalue").value);
+        let operation = document.getElementById("operation").value;
+        let result;
+    
+        if (operation === "add") {
+            result = firstvalue + secondvalue;
+        } else if (operation === "subtract") {
+            result = firstvalue - secondvalue;
+        } else if (operation === "multiply") {
+            result = firstvalue * secondvalue;
+        } else if (operation === "divided") {
+            if (secondvalue === 0) {
+                result = "Cannot divide by 0";
+            } else {
+                result = firstvalue / secondvalue;
+            }
+        }
+    
+        document.getElementById("finalvalue").value = result; 
+        // document.getElementById("result").textContent = "Result: " + result; 
+    }
+    </script> 
+
+</script> 
+
+</body>
+</html>
